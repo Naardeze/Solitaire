@@ -84,7 +84,7 @@ final public class Game extends JLabel implements MouseListener, Runnable {
             tableau[i].setBounds(INSET + i * (CARD_WIDTH + GAP), INSET + CARD_HEIGHT + INSET, CARD_WIDTH, i * Tableau.DOWN + (Card.Rank.values().length - 2) * Tableau.UP + CARD_HEIGHT);
             add(tableau[i]);
             
-            for (int j = 0; j < i + 1; j++) {
+            for (int j = 0; j <= i; j++) {
                 tableau[i].setCard(deck.getCard());
             }
             
