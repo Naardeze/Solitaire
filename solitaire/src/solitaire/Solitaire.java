@@ -35,7 +35,7 @@ final public class Solitaire extends JDialog {
         JMenu menu = new JMenu("Game");
         
         for (GameType gameType : GameType.values()) {
-            menu.add(gameType.name()).addActionListener(e -> {
+            menu.add(gameType.toString()).addActionListener(e -> {
                 game = new Game(gameType);
 
                 setContentPane(game);
