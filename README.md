@@ -5,6 +5,6 @@ Simple Java Swing Solitaire Card Game
 
 The back and face png files are 'home made' -> no scaling, see  my Playcard repository.
 
-I'm not a pro (learned Java on youtube) and made Solitaire for personal use (no comments), but the code speaks for itself.
+I'm not a pro (learned Java on youtube) and made Solitaire for  practice and personal use, the code has no comments, but speaks for itself.
 
 Have fun.
