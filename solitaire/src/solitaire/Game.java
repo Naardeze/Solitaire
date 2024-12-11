@@ -53,7 +53,7 @@ final public class Game extends JLabel implements MouseListener, Runnable {
                 e.getChild().setLocation(0, 0);
             }
         });
-        deck.setBounds(INSET + 6 * (CARD_WIDTH + GAP), INSET, CARD_WIDTH, CARD_HEIGHT);
+        deck.setBounds(6 * (CARD_WIDTH + GAP), 0, CARD_WIDTH, CARD_HEIGHT);
         add(deck);
         
         waste.addContainerListener(new ContainerAdapter() {
@@ -72,16 +72,16 @@ final public class Game extends JLabel implements MouseListener, Runnable {
                 }
             }
         });
-        waste.setBounds(INSET + 5 * (CARD_WIDTH + GAP) - 2 * STEP, INSET, 2 * STEP + CARD_WIDTH, CARD_HEIGHT);
+        waste.setBounds(5 * (CARD_WIDTH + GAP) - 2 * STEP, 0, 2 * STEP + CARD_WIDTH, CARD_HEIGHT);
         add(waste);
         
         for (int i = 0; i < foundation.length; i++) {
-            foundation[i].setBounds(INSET + i * (CARD_WIDTH + GAP), INSET, CARD_WIDTH, CARD_HEIGHT);
+            foundation[i].setBounds(i * (CARD_WIDTH + GAP), 0, CARD_WIDTH, CARD_HEIGHT);
             add(foundation[i]);
         }
         
         for (int i = 0; i < tableau.length; faceDown += i++) {
-            tableau[i].setBounds(INSET + i * (CARD_WIDTH + GAP), INSET + CARD_HEIGHT + INSET, CARD_WIDTH, i * Tableau.DOWN + (Card.Rank.values().length - 2) * Tableau.UP + CARD_HEIGHT);
+            tableau[i].setBounds(i * (CARD_WIDTH + GAP), CARD_HEIGHT + INSET, CARD_WIDTH, i * Tableau.DOWN + (Card.Rank.values().length - 2) * Tableau.UP + CARD_HEIGHT);
             add(tableau[i]);
             
             for (int j = 0; j <= i; j++) {
@@ -95,7 +95,7 @@ final public class Game extends JLabel implements MouseListener, Runnable {
         setBackground(new Color(0, 200, 0));
         setHorizontalAlignment(JLabel.CENTER);
         setFont(getFont().deriveFont((float) CARD_HEIGHT / 3));
-        setPreferredSize(new Dimension(tableau[tableau.length - 1].getX() + tableau[tableau.length - 1].getWidth() + INSET, tableau[tableau.length - 1].getY() + tableau[tableau.length - 1].getHeight() + INSET));
+        setPreferredSize(new Dimension(tableau[tableau.length - 1].getX() + tableau[tableau.length - 1].getWidth(), tableau[tableau.length - 1].getY() + tableau[tableau.length - 1].getHeight()));
 
         addMouseListener(this);
     }
