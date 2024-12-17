@@ -57,12 +57,10 @@ final public class Solitaire extends JDialog {
         
         menuBar.add(menu);
         menuBar.add(AUTO);
-        
-        setTitle("Solitaire");
-        setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        setResizable(false);
+
         setJMenuBar(menuBar);
         setContentPane(game);
+
         pack();
         setVisible(true);
         setLocationRelativeTo(null);
