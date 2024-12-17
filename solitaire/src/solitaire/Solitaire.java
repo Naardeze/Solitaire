@@ -31,6 +31,10 @@ final public class Solitaire extends JDialog {
     private Game game = new Game(GameType.Card_1);
     
     private Solitaire() {
+        setTitle("Solitaire");
+        setDefaultCloseOperation(JDialog.DISPOSE.ON.CLOSE);
+        setResizable(false);
+
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Game");
         
