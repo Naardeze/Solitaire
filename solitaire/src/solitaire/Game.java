@@ -23,7 +23,8 @@ import solitaire.pile.Tableau;
 
 final public class Game extends JLabel implements MouseListener, Runnable {
     final private static int COLUMN = CARD_WIDTH + 1;
-    final private static int ROW = CARDHEIGHT + 6;
+    final private static int ROW = CARD_HEIGHT + 6;
+
     final private static int STEP = 15;
     
     final private Pile deck = new Pile("\ud83d\udd04");
@@ -53,7 +54,7 @@ final public class Game extends JLabel implements MouseListener, Runnable {
                 e.getChild().setLocation(0, 0);
             }
         });
-        deck.setBounds(6 * CARD_WIDTH, 0, CARD_WIDTH, CARD_HEIGHT);
+        deck.setBounds(6 * COLUMN, 0, CARD_WIDTH, CARD_HEIGHT);
         add(deck);
         
         waste.addContainerListener(new ContainerAdapter() {
@@ -72,16 +73,16 @@ final public class Game extends JLabel implements MouseListener, Runnable {
                 }
             }
         });
-        waste.setBounds(5 * CARD_WIDTH - 2 * STEP, 0, 2 * STEP + CARD_WIDTH, CARD_HEIGHT);
+        waste.setBounds(5 * COLUMN - 2 * STEP, 0, 2 * STEP + CARD_WIDTH, CARD_HEIGHT);
         add(waste);
         
         for (int i = 0; i < foundation.length; i++) {
-            foundation[i].setBounds(i * CARD_WIDTH, 0, CARD_WIDTH, CARD_HEIGHT);
+            foundation[i].setBounds(i * COLUMN, 0, CARD_WIDTH, CARD_HEIGHT);
             add(foundation[i]);
         }
         
         for (int i = 0; i < tableau.length; faceDown += i++) {
-            tableau[i].setBounds(i * CARD_WIDTH, CARD_HEIGHT + GAP, CARD_WIDTH, i * Tableau.DOWN + (Card.Rank.values().length - 2) * Tableau.UP + CARD_HEIGHT);
+            tableau[i].setBounds(i * COLUMN, ROW, CARD_WIDTH, i * Tableau.DOWN + (Card.Rank.values().length - 2) * Tableau.UP + CARD_HEIGHT);
             add(tableau[i]);
             
             for (int j = 0; j <= i; j++) {
