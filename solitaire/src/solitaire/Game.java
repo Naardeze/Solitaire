@@ -24,7 +24,6 @@ import solitaire.pile.Tableau;
 final public class Game extends JLabel implements MouseListener, Runnable {
     final private static int COLUMN = CARD_WIDTH + 1;
     final private static int ROW = CARD_HEIGHT + 6;
-
     final private static int STEP = 15;
     
     final private Pile deck = new Pile("\ud83d\udd04");
