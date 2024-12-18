@@ -15,7 +15,7 @@ final public class Solitaire extends JDialog {
     final public static JButton AUTO = new JButton("AUTO");
     
     public enum GameType {
-        Card_1(1), Card_3(3);
+        Turn_1(1), Turn_3(3);
         
         final private int value;
         
@@ -28,7 +28,7 @@ final public class Solitaire extends JDialog {
         }
     }
     
-    private Game game = new Game(GameType.Card_1);
+    private Game game = new Game(GameType.Turn_1);
     
     private Solitaire() {
         JMenuBar menuBar = new JMenuBar();
