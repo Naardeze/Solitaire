@@ -15,4 +15,5 @@ Card: (enum) suit, rank -> faceUp.
     (icon) back -> !faceUp.
 
 Pile: with (deck, foundation) or without (waste, tableau) symbol.
+
     containerListener -> cardXY
