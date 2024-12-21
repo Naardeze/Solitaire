@@ -14,6 +14,4 @@ Game: game'panel' -> Layout piles, shuffle and deal cards.
 Card: (enum) suit, rank -> faceUp.
     (icon) back -> !faceUp.
 
-Pile: with (deck, foundation) or without (waste, tableau) symbol.
-
-    containerListener -> cardXY
+Pile: with (deck, foundation) or without (waste, tableau) symbol, containerListener -> cardXY
