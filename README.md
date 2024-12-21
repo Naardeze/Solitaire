@@ -5,7 +5,7 @@ Turn_1 or Turn_3 -> (auto) completed -> display time.
 
 Solitaire: (main) window
 
-Game: game'panel' -> Layout piles, shuffle and deal cards.
+Game: game'panel'
 
 -MouseListener -> player moves.
 
