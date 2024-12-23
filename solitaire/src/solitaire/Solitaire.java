@@ -2,7 +2,6 @@ package solitaire;
 
 import java.awt.Color;
 import java.io.File;
-import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -66,7 +65,7 @@ final public class Solitaire extends JDialog {
         setLocationRelativeTo(null);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         Card.face = ImageIO.read(new File("face.png"));
         
         new Solitaire();
