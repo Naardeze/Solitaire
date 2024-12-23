@@ -223,7 +223,7 @@ final public class Game extends JLabel implements MouseListener, Runnable {
                         
                         try {
                             Thread.sleep(140);
-                        } catch (InterruptedException ex) {}
+                        } catch (Exception ex) {}
                     }
                 }
             }
