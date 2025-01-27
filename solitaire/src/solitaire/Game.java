@@ -59,7 +59,7 @@ final public class Game extends JLabel implements MouseListener, Runnable {
             public void componentAdded(ContainerEvent e) {
                 e.getChild().setLocation(waste.getWidth() - e.getChild().getWidth(), 0);
                 
-                for (int i = 1; i < Math.min(e.getChild().getX() / STEP + 1, waste.getComponentCount()); i++) {
+                for (int i = 1; i < Math.min(1 + e.getChild().getX() / STEP, waste.getComponentCount()); i++) {
                     waste.getComponent(i).setLocation(waste.getComponent(i).getX() - STEP, 0);
                 }
             }
